@@ -1,8 +1,3 @@
-from unittest import result
-
-import self as self
-
-
 class BruteForseGenerator:
     def __init__(self, alphabet='123456789qwertyuiopasdfghjklzxcvbnm'):
         self.alphabet = alphabet

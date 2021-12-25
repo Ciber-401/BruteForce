@@ -1,18 +1,18 @@
-def simple_logic(login_generator, password_generator, query):
+def Simple_logic(login_generator, password_generator, query):
     login = login_generator.generate()
     if login is None:
         return
 
     while True:
         password = password_generator.generate()
-        if password in None:
+        if password is None:
             return
 
         if query(login, password):
             print('SUCCES', login, password)
             return
 
-def get_accounts_logic(login_genrator, password_generator, query, login_limit = 1000, password_limit=1000):
+def Get_accounts_logic(login_genrator, password_generator, query, login_limit = 1000, password_limit=1000):
     succes_logins = set()
 
     for i in range(password_limit):
@@ -31,9 +31,9 @@ def get_accounts_logic(login_genrator, password_generator, query, login_limit = 
                 succes_logins.add(login)
 
 
-def get_password_logic(login_genrator, password_generator, query, login_limit = 1000, password_limit=1000):
+def Get_password_logic(login_genrator, password_generator, query, password_limit=1000):
     while True:
-        login = login_genrator .generate()
+        login = login_genrator.generate()
         if login is None:
             break
 
